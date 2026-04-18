@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EQ Presidency Meeting — {{DATE}}</title>
+  <title>EQ Presidency Meeting — April 19, 2026</title>
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -108,20 +108,6 @@
       font-weight: 500;
     }
 
-    /* ── Subsection ── */
-    .subsection {
-      margin-bottom: 1.25rem;
-    }
-
-    .subsection h3 {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 0.6rem;
-    }
-
     /* ── Lists ── */
     ul {
       list-style: none;
@@ -145,67 +131,18 @@
       font-weight: 700;
     }
 
-    ul li .meta {
-      display: block;
-      font-size: 0.78rem;
-      color: #888;
-      margin-top: 0.1rem;
-    }
-
-    ul li .question {
-      display: block;
-      font-size: 0.82rem;
-      color: #555;
-      font-style: italic;
-      margin-top: 0.15rem;
-    }
-
-    /* ── Focus Family ── */
-    .focus-family {
-      background: #f0f5fb;
-      border-left: 3px solid #1a3a5c;
-      border-radius: 0 7px 7px 0;
-      padding: 1rem 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    .focus-family h3 {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    ul li a {
       color: #1a3a5c;
-      margin-bottom: 0.5rem;
     }
 
-    .focus-family .family-name {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      color: #1a1a1a;
-    }
-
-    .focus-family ol {
-      padding-left: 1.2rem;
-      font-size: 0.9rem;
-      color: #444;
-    }
-
-    .focus-family ol li {
-      padding: 0.25rem 0;
-      border-bottom: none;
-    }
-
-    .focus-family ol li::before { content: none; }
-
-    /* ── Action items table ── */
-    .action-table {
+    /* ── Decisions table ── */
+    .decisions-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.875rem;
     }
 
-    .action-table th {
+    .decisions-table th {
       text-align: left;
       font-size: 0.7rem;
       font-weight: 700;
@@ -216,48 +153,19 @@
       border-bottom: 2px solid #e8e6e0;
     }
 
-    .action-table td {
+    .decisions-table td {
       padding: 0.5rem 0.5rem;
       vertical-align: top;
       border-bottom: 1px solid #f0eeea;
       color: #333;
     }
 
-    .action-table tr:last-child td { border-bottom: none; }
+    .decisions-table tr:last-child td { border-bottom: none; }
 
-    .badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      padding: 0.15rem 0.45rem;
-      border-radius: 4px;
-      letter-spacing: 0.04em;
-    }
-
-    .badge-blocked { background: #fde8e8; color: #c0392b; }
-    .badge-open    { background: #e8f4fd; color: #2980b9; }
-    .badge-progress { background: #fef3e0; color: #e67e22; }
-
-    /* ── Empty state ── */
-    .empty {
-      font-size: 0.88rem;
-      color: #aaa;
+    .decisions-table td.blank {
+      color: #ccc;
       font-style: italic;
-      padding: 0.5rem 0;
-    }
-
-    /* ── Decisions box ── */
-    .decisions-box {
-      background: #f8f7f4;
-      border-radius: 7px;
-      padding: 1rem 1.25rem;
-      min-height: 4rem;
-    }
-
-    .decisions-box p {
-      font-size: 0.85rem;
-      color: #aaa;
-      font-style: italic;
+      font-size: 0.8rem;
     }
 
     /* ── Footer ── */
@@ -277,7 +185,6 @@
       body { background: #fff; padding: 0; }
       .page { box-shadow: none; border-radius: 0; }
       .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .focus-family { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
 
     /* ── Mobile ── */
@@ -296,89 +203,121 @@
     <div class="header">
       <div class="org">Morgan Hill Ward · Elders Quorum</div>
       <h1>Presidency Meeting</h1>
-      <div class="date">{{DATE_LONG}}</div>
+      <div class="date">Sunday, April 19, 2026 · 30 minutes</div>
     </div>
 
     <div class="body">
 
-      <!-- Opening / Closing -->
+      <!-- Opening / Spiritual / Closing -->
       <div class="framing">
         <div class="framing-item">
           <strong>Opening Prayer</strong>
-          {{OPENING_PRAYER}}
+          Mike
         </div>
         <div class="framing-item">
           <strong>Spiritual Thought</strong>
-          {{SPIRITUAL_THOUGHT}}
+          Nathan
         </div>
         <div class="framing-item">
           <strong>Closing Prayer</strong>
-          {{CLOSING_PRAYER}}
+          Steve
         </div>
       </div>
 
-      <!-- Action Items -->
+      <!-- 1. Missionary Work -->
       <div class="section">
         <div class="section-header">
-          <h2>Action Items for Review</h2>
-          <span class="time">{{ACTION_ITEM_COUNT}} items</span>
-        </div>
-        {{ACTION_ITEMS_HTML}}
-      </div>
-
-      <!-- Individuals & Families -->
-      <div class="section">
-        <div class="section-header">
-          <h2>Individuals &amp; Families</h2>
-          <span class="time">30 min · People First, Covenant Path Anchored</span>
-        </div>
-
-        <div class="subsection">
-          <h3>Prospective Elders</h3>
-          <ul>
-            {{PROSPECTIVE_ELDERS_HTML}}
-          </ul>
-        </div>
-
-        <div class="subsection">
-          <h3>Part-Member Families</h3>
-          <ul>
-            {{PART_MEMBER_FAMILIES_HTML}}
-          </ul>
-        </div>
-
-        <div class="focus-family">
-          <h3>Focus Family</h3>
-          <div class="family-name">{{FOCUS_FAMILY_NAME}}</div>
-          <ol>
-            <li>Where should the quorum focus right now?</li>
-            <li>What specific support would help?</li>
-            <li>Is there anything the quorum should do?</li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- Ministering Alignment -->
-      <div class="section">
-        <div class="section-header">
-          <h2>Ministering Alignment</h2>
-          <span class="time">10 min</span>
+          <h2>1. Missionary Work</h2>
+          <span class="time">7 min</span>
         </div>
         <ul>
-          <li>Confirm visit rhythm. Identify one adjustment to better support individuals discussed above.</li>
-          <li>What are we learning from ministering interviews?</li>
+          <li>Reference live sheet for names: <a href="https://docs.google.com/spreadsheets/d/1a5AybCZ741nFyNyQVLjYPNLZSnpXXn2KVWeOxklsaDg" target="_blank">EQ Focus Groups</a></li>
+          <li>Walk Tab 1 (Prospective Elders) and Tab 2 (Part-Member Families) for anyone with an open next step.</li>
+          <li>For each name discussed: assign one owner and a concrete next action.</li>
         </ul>
       </div>
 
-      <!-- Decisions & Next Steps -->
+      <!-- 2. Calling for Chris Shiver -->
       <div class="section">
         <div class="section-header">
-          <h2>Decisions &amp; Next Steps</h2>
+          <h2>2. Calling for Chris Shiver</h2>
           <span class="time">5 min</span>
         </div>
-        <div class="decisions-box">
-          <p>Record decisions and confirm owners before closing.</p>
+        <ul>
+          <li>What calling best serves his integration and path to Melchizedek Priesthood?</li>
+          <li>Who extends it, and when?</li>
+          <li>Does this need Bishop approval first?</li>
+        </ul>
+      </div>
+
+      <!-- 3. Ministering District Prep -->
+      <div class="section">
+        <div class="section-header">
+          <h2>3. Ministering District Prep</h2>
+          <span class="time">7 min</span>
         </div>
+        <ul>
+          <li>Assignments are current. Each presidency member reviews their district and prepares updates to share with Brother Pfeifer for upcoming ministering interviews.</li>
+          <li>Any household in your district with a pressing need flagged today?</li>
+          <li>Any update from recent contacts worth surfacing?</li>
+        </ul>
+      </div>
+
+      <!-- 4. Quorum Teaching -->
+      <div class="section">
+        <div class="section-header">
+          <h2>4. Quorum Teaching</h2>
+          <span class="time">3 min</span>
+        </div>
+        <ul>
+          <li>Who is teaching next and on what topic?</li>
+          <li>Any support needed?</li>
+        </ul>
+      </div>
+
+      <!-- 5. Quorum Members — Needs Check -->
+      <div class="section">
+        <div class="section-header">
+          <h2>5. Quorum Members — Needs Check</h2>
+          <span class="time">3 min</span>
+        </div>
+        <ul>
+          <li>Anyone going through a difficult season who needs a visit or outreach from the presidency?</li>
+        </ul>
+      </div>
+
+      <!-- 6. Decisions & Next Steps -->
+      <div class="section">
+        <div class="section-header">
+          <h2>6. Decisions &amp; Next Steps</h2>
+          <span class="time">3 min</span>
+        </div>
+        <table class="decisions-table">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Owner</th>
+              <th>Due</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chris Shiver calling</td>
+              <td class="blank">—</td>
+              <td class="blank">—</td>
+            </tr>
+            <tr>
+              <td>Missionary work follow-ups (from sheet)</td>
+              <td class="blank">—</td>
+              <td class="blank">—</td>
+            </tr>
+            <tr>
+              <td>District updates to Brother Pfeifer</td>
+              <td>Each member</td>
+              <td class="blank">—</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
     </div><!-- /body -->
@@ -386,7 +325,7 @@
     <!-- Footer -->
     <div class="footer">
       <span>Morgan Hill Ward · Elders Quorum Presidency</span>
-      <span>Generated {{GENERATED_DATE}}</span>
+      <span>Generated April 18, 2026</span>
     </div>
 
   </div><!-- /page -->
