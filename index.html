@@ -3,197 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EQ Presidency Meeting — April 19, 2026</title>
+  <title>EQ Presidency Meeting — April 27, 2026</title>
   <style>
-    /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f5f4f0;
-      color: #1a1a1a;
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
-
-    /* ── Page wrapper ── */
-    .page {
-      max-width: 720px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-      overflow: hidden;
-    }
-
-    /* ── Header ── */
-    .header {
-      background: #1a3a5c;
-      color: #fff;
-      padding: 2rem 2.5rem 1.75rem;
-    }
-
-    .header .org {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.7;
-      margin-bottom: 0.4rem;
-    }
-
-    .header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .header .date {
-      font-size: 0.95rem;
-      opacity: 0.8;
-      margin-top: 0.35rem;
-    }
-
-    /* ── Body ── */
-    .body {
-      padding: 2rem 2.5rem;
-    }
-
-    /* ── Framing (opening/closing) ── */
-    .framing {
-      display: flex;
-      gap: 2rem;
-      padding: 1rem 1.25rem;
-      background: #f8f7f4;
-      border-radius: 7px;
-      margin-bottom: 2rem;
-      font-size: 0.9rem;
-      color: #444;
-    }
-
-    .framing-item strong {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 0.2rem;
-    }
-
-    /* ── Section ── */
-    .section {
-      margin-bottom: 2rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 0.6rem;
-      margin-bottom: 0.85rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #e8e6e0;
-    }
-
-    .section-header h2 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      color: #1a3a5c;
-    }
-
-    .section-header .time {
-      font-size: 0.75rem;
-      color: #999;
-      font-weight: 500;
-    }
-
-    /* ── Lists ── */
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      padding: 0.45rem 0 0.45rem 1.1rem;
-      position: relative;
-      font-size: 0.92rem;
-      border-bottom: 1px solid #f0eeea;
-    }
-
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f4f0; color: #1a1a1a; line-height: 1.6; padding: 2rem 1rem; }
+    .page { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); overflow: hidden; }
+    .header { background: #1a3a5c; color: #fff; padding: 2rem 2.5rem 1.75rem; }
+    .header .org { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; margin-bottom: 0.4rem; }
+    .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
+    .header .date { font-size: 0.95rem; opacity: 0.8; margin-top: 0.35rem; }
+    .body { padding: 2rem 2.5rem; }
+    .framing { display: flex; gap: 2rem; padding: 1rem 1.25rem; background: #f8f7f4; border-radius: 7px; margin-bottom: 2rem; font-size: 0.9rem; color: #444; }
+    .framing-item strong { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 0.2rem; }
+    .section { margin-bottom: 2rem; }
+    .section-header { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.85rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e8e6e0; }
+    .section-header h2 { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.02em; color: #1a3a5c; }
+    .section-header .time { font-size: 0.75rem; color: #999; font-weight: 500; }
+    ul { list-style: none; padding: 0; }
+    ul li { padding: 0.45rem 0 0.45rem 1.1rem; position: relative; font-size: 0.92rem; border-bottom: 1px solid #f0eeea; }
     ul li:last-child { border-bottom: none; }
-
-    ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #1a3a5c;
-      font-weight: 700;
-    }
-
-    ul li a {
-      color: #1a3a5c;
-    }
-
-    /* ── Decisions table ── */
-    .decisions-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.875rem;
-    }
-
-    .decisions-table th {
-      text-align: left;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #888;
-      padding: 0 0.5rem 0.5rem;
-      border-bottom: 2px solid #e8e6e0;
-    }
-
-    .decisions-table td {
-      padding: 0.5rem 0.5rem;
-      vertical-align: top;
-      border-bottom: 1px solid #f0eeea;
-      color: #333;
-    }
-
+    ul li::before { content: "•"; position: absolute; left: 0; color: #1a3a5c; font-weight: 700; }
+    .question { display: block; font-size: 0.82rem; color: #666; font-style: italic; margin-top: 0.15rem; }
+    .subsection-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1a3a5c; margin: 1rem 0 0.4rem; }
+    .focus-family-box { background: #f0f4f9; border-left: 3px solid #1a3a5c; border-radius: 0 6px 6px 0; padding: 0.75rem 1rem; margin-bottom: 0.75rem; font-size: 0.92rem; }
+    .focus-family-box strong { color: #1a3a5c; }
+    ol { padding-left: 1.2rem; font-size: 0.92rem; }
+    ol li { padding: 0.3rem 0; color: #333; }
+    .action-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .action-table th { text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #888; padding: 0 0.5rem 0.5rem; border-bottom: 2px solid #e8e6e0; }
+    .action-table td { padding: 0.5rem 0.5rem; vertical-align: top; border-bottom: 1px solid #f0eeea; color: #333; }
+    .action-table tr:last-child td { border-bottom: none; }
+    .badge { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.45rem; border-radius: 3px; }
+    .badge-not-started { background: #fee2e2; color: #991b1b; }
+    .badge-in-progress { background: #fef3c7; color: #92400e; }
+    .badge-blocked { background: #f3e8ff; color: #6b21a8; }
+    .decisions-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .decisions-table th { text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #888; padding: 0 0.5rem 0.5rem; border-bottom: 2px solid #e8e6e0; }
+    .decisions-table td { padding: 0.5rem 0.5rem; vertical-align: top; border-bottom: 1px solid #f0eeea; color: #333; }
     .decisions-table tr:last-child td { border-bottom: none; }
-
-    .decisions-table td.blank {
-      color: #ccc;
-      font-style: italic;
-      font-size: 0.8rem;
-    }
-
-    /* ── Footer ── */
-    .footer {
-      padding: 1.25rem 2.5rem;
-      border-top: 1px solid #e8e6e0;
-      font-size: 0.75rem;
-      color: #bbb;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #fafafa;
-    }
-
-    /* ── Print ── */
-    @media print {
-      body { background: #fff; padding: 0; }
-      .page { box-shadow: none; border-radius: 0; }
-      .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    }
-
-    /* ── Mobile ── */
-    @media (max-width: 600px) {
-      .body { padding: 1.5rem 1.25rem; }
-      .header { padding: 1.5rem 1.25rem; }
-      .footer { padding: 1rem 1.25rem; flex-direction: column; gap: 0.25rem; text-align: center; }
-      .framing { flex-direction: column; gap: 0.75rem; }
-    }
+    .decisions-table td.blank { color: #ccc; font-style: italic; font-size: 0.8rem; }
+    .footer { padding: 1.25rem 2.5rem; border-top: 1px solid #e8e6e0; font-size: 0.75rem; color: #bbb; display: flex; justify-content: space-between; align-items: center; background: #fafafa; }
+    @media print { body { background: #fff; padding: 0; } .page { box-shadow: none; border-radius: 0; } .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    @media (max-width: 600px) { .body { padding: 1.5rem 1.25rem; } .header { padding: 1.5rem 1.25rem; } .footer { padding: 1rem 1.25rem; flex-direction: column; gap: 0.25rem; text-align: center; } .framing { flex-direction: column; gap: 0.75rem; } }
   </style>
 </head>
 <body>
@@ -201,121 +52,145 @@
 
     <!-- Header -->
     <div class="header">
-      <div class="org">Morgan Hill Ward · Elders Quorum</div>
+      <div class="org">Morgan Hill Ward &middot; Elders Quorum</div>
       <h1>Presidency Meeting</h1>
-      <div class="date">Sunday, April 19, 2026 · 30 minutes</div>
+      <div class="date">Sunday, April 27, 2026 &middot; 30 minutes</div>
     </div>
 
     <div class="body">
 
-      <!-- Opening / Spiritual / Closing -->
+      <!-- Framing -->
       <div class="framing">
         <div class="framing-item">
           <strong>Opening Prayer</strong>
-          Mike
+          Brad
         </div>
         <div class="framing-item">
           <strong>Spiritual Thought</strong>
-          Nathan
+          Steve
         </div>
         <div class="framing-item">
           <strong>Closing Prayer</strong>
-          Steve
+          Mike
         </div>
       </div>
 
-      <!-- 1. Missionary Work -->
+      <!-- Action Items -->
       <div class="section">
         <div class="section-header">
-          <h2>1. Missionary Work</h2>
-          <span class="time">7 min</span>
+          <h2>Action Items for Review</h2>
+          <span class="time">3 items &mdash; due by meeting or blocked</span>
         </div>
-        <ul>
-          <li>Reference live sheet for names: <a href="https://docs.google.com/spreadsheets/d/1a5AybCZ741nFyNyQVLjYPNLZSnpXXn2KVWeOxklsaDg" target="_blank">EQ Focus Groups</a></li>
-          <li>Walk Tab 1 (Prospective Elders) and Tab 2 (Part-Member Families) for anyone with an open next step.</li>
-          <li>For each name discussed: assign one owner and a concrete next action.</li>
-        </ul>
-      </div>
-
-      <!-- 2. Calling for Chris Shiver -->
-      <div class="section">
-        <div class="section-header">
-          <h2>2. Calling for Chris Shiver</h2>
-          <span class="time">5 min</span>
-        </div>
-        <ul>
-          <li>What calling best serves his integration and path to Melchizedek Priesthood?</li>
-          <li>Who extends it, and when?</li>
-          <li>Does this need Bishop approval first?</li>
-        </ul>
-      </div>
-
-      <!-- 3. Ministering District Prep -->
-      <div class="section">
-        <div class="section-header">
-          <h2>3. Ministering District Prep</h2>
-          <span class="time">7 min</span>
-        </div>
-        <ul>
-          <li>Assignments are current. Each presidency member reviews their district and prepares updates to share with Brother Pfeifer for upcoming ministering interviews.</li>
-          <li>Any household in your district with a pressing need flagged today?</li>
-          <li>Any update from recent contacts worth surfacing?</li>
-        </ul>
-      </div>
-
-      <!-- 4. Quorum Teaching -->
-      <div class="section">
-        <div class="section-header">
-          <h2>4. Quorum Teaching</h2>
-          <span class="time">3 min</span>
-        </div>
-        <ul>
-          <li>Who is teaching next and on what topic?</li>
-          <li>Any support needed?</li>
-        </ul>
-      </div>
-
-      <!-- 5. Quorum Members — Needs Check -->
-      <div class="section">
-        <div class="section-header">
-          <h2>5. Quorum Members — Needs Check</h2>
-          <span class="time">3 min</span>
-        </div>
-        <ul>
-          <li>Anyone going through a difficult season who needs a visit or outreach from the presidency?</li>
-        </ul>
-      </div>
-
-      <!-- 6. Decisions & Next Steps -->
-      <div class="section">
-        <div class="section-header">
-          <h2>6. Decisions &amp; Next Steps</h2>
-          <span class="time">3 min</span>
-        </div>
-        <table class="decisions-table">
+        <table class="action-table">
           <thead>
-            <tr>
-              <th>Action</th>
-              <th>Owner</th>
-              <th>Due</th>
-            </tr>
+            <tr><th>Item</th><th>Owner</th><th>Due</th><th>Status</th></tr>
           </thead>
           <tbody>
             <tr>
-              <td>Chris Shiver calling</td>
-              <td class="blank">—</td>
-              <td class="blank">—</td>
+              <td>Decide on second permanent quorum teacher via group text</td>
+              <td>Presidency</td>
+              <td>Apr 25</td>
+              <td><span class="badge badge-not-started">Not Started</span></td>
             </tr>
             <tr>
-              <td>Missionary work follow-ups (from sheet)</td>
-              <td class="blank">—</td>
-              <td class="blank">—</td>
+              <td>Submit second permanent teacher name to bishop</td>
+              <td>Nathan</td>
+              <td>Apr 25</td>
+              <td><span class="badge badge-not-started">Not Started</span></td>
             </tr>
             <tr>
-              <td>District updates to Brother Pfeifer</td>
-              <td>Each member</td>
-              <td class="blank">—</td>
+              <td>Move forward with temple &amp; family history plan without requiring bishop&#39;s prior approval</td>
+              <td>Presidency</td>
+              <td>Apr 25</td>
+              <td><span class="badge badge-not-started">Not Started</span></td>
             </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Individuals & Families -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Individuals &amp; Families &mdash; People First, Covenant Path Anchored</h2>
+          <span class="time">30 min</span>
+        </div>
+
+        <div class="subsection-label">Prospective Elders</div>
+        <ul>
+          <li>
+            <strong>Gavin Lundquist</strong> &mdash; Progression toward Melchizedek Priesthood in motion; bishop conversation flagged as pending since March.
+            <span class="question">Where does Gavin stand right now &mdash; is there a specific next ordinance step we&rsquo;re working toward, and when can Nathan meet with the bishop?</span>
+          </li>
+          <li>
+            <strong>Landon</strong> &mdash; Identified as a prospective elder; bishop conversation needed to clarify his path forward.
+            <span class="question">Has anyone connected with Landon recently &mdash; does he understand the Melchizedek Priesthood path and is he interested?</span>
+          </li>
+          <li>
+            <strong>Chris Shriver</strong> &mdash; Needs priesthood ordination; identified as companion to Brian Law, pending ordination.
+            <span class="question">What is the current status of Chris&rsquo;s ordination &mdash; is the bishop aware of the timing, and what would move this forward this week?</span>
+          </li>
+        </ul>
+
+        <div class="subsection-label">Part-Member Families</div>
+        <ul>
+          <li>
+            <strong>McIver</strong> &mdash; Shayna attends regularly and works in Primary; Jeff not open to visits; sons Camden and Aiden need ordinances.
+            <span class="question">Is there someone maintaining a consistent relationship with Camden and Aiden, and could Shayna help identify the right approach to Jeff?</span>
+          </li>
+          <li>
+            <strong>Cain</strong> &mdash; Son Brody (age 8) not yet baptized; family has requested slower outreach pace.
+            <span class="question">Is there a gentle, relationship-centered touchpoint that keeps the door open for Brody&rsquo;s baptism without creating pressure?</span>
+          </li>
+          <li>
+            <strong>Laura Lauver</strong> &mdash; Husband Nick and children Kaden &amp; Cheyenne not members; minister TBD; next: Sacrament and Baptism.
+            <span class="question">Is a minister assigned, and who in the quorum has the best existing relationship with Nick Lauver?</span>
+          </li>
+          <li>
+            <strong>Yokeley</strong> &mdash; Non-member children Melody and Mylo; needs consistent contact; next: Sacrament/Baptisms.
+            <span class="question">What do we know about the Yokeley family&rsquo;s current openness, and are Melody and Mylo at ages where baptism is a near-term possibility?</span>
+          </li>
+          <li>
+            <strong>Schultz</strong> &mdash; Non-member children Carly and George; limited notes in record.
+            <span class="question">How recently have ministering brothers connected with the Schultz family, and where are Carly and George in their relationship with the Church?</span>
+          </li>
+        </ul>
+
+        <div class="subsection-label">Focus Family</div>
+        <div class="focus-family-box">
+          <strong>Phipps</strong> &mdash; Part-member family; non-member children Ava and Carter; ministering assignment TBD; next ordinances: Sacrament and Baptisms.
+        </div>
+        <ol>
+          <li>Where should the quorum focus right now?</li>
+          <li>What specific support would help?</li>
+          <li>Is there anything the quorum should do?</li>
+        </ol>
+      </div>
+
+      <!-- Ministering Alignment -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Ministering Alignment</h2>
+          <span class="time">10 min</span>
+        </div>
+        <ul>
+          <li>Confirm visit rhythm. Identify one adjustment to better support individuals discussed above.</li>
+          <li>What are we learning from ministering interviews?</li>
+        </ul>
+      </div>
+
+      <!-- Decisions & Next Steps -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Decisions &amp; Next Steps</h2>
+          <span class="time">5 min</span>
+        </div>
+        <p style="font-size:0.9rem;color:#555;margin-bottom:0.75rem;">Confirm every decision. Assign owner and date before closing.</p>
+        <table class="decisions-table">
+          <thead>
+            <tr><th>Action</th><th>Owner</th><th>Due</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&mdash;</td><td class="blank">&mdash;</td><td class="blank">&mdash;</td></tr>
           </tbody>
         </table>
       </div>
@@ -324,8 +199,8 @@
 
     <!-- Footer -->
     <div class="footer">
-      <span>Morgan Hill Ward · Elders Quorum Presidency</span>
-      <span>Generated April 18, 2026</span>
+      <span>Morgan Hill Ward &middot; Elders Quorum Presidency</span>
+      <span>Generated April 25, 2026</span>
     </div>
 
   </div><!-- /page -->
