@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EQ Presidency Meeting — May 24, 2026</title>
+  <title>EQ Presidency Meeting — June 8, 2026</title>
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -108,27 +108,6 @@
       font-weight: 500;
     }
 
-    /* ── Urgent banner ── */
-    .urgent {
-      background: #fff8e6;
-      border-left: 3px solid #e6a817;
-      border-radius: 5px;
-      padding: 0.75rem 1rem;
-      font-size: 0.9rem;
-      color: #444;
-      margin-bottom: 2rem;
-    }
-
-    .urgent strong {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #b07d10;
-      margin-bottom: 0.3rem;
-    }
-
     /* ── Lists ── */
     ul {
       list-style: none;
@@ -152,9 +131,111 @@
       font-weight: 700;
     }
 
-    ul li a {
-      color: #1a3a5c;
+    ul li a { color: #1a3a5c; }
+
+    /* ── Subsection header ── */
+    .subsection-header {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin: 1.1rem 0 0.5rem;
     }
+
+    /* ── Question callout ── */
+    .question {
+      display: block;
+      font-style: italic;
+      color: #777;
+      font-size: 0.84rem;
+      margin-top: 0.2rem;
+      padding-left: 0.25rem;
+      border-left: 2px solid #d8d4cc;
+    }
+
+    /* ── Focus family block ── */
+    .focus-family {
+      background: #f0f5fa;
+      border-left: 3px solid #1a3a5c;
+      border-radius: 5px;
+      padding: 0.85rem 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .focus-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #1a3a5c;
+      margin-bottom: 0.25rem;
+    }
+
+    .focus-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1a3a5c;
+      margin-bottom: 0.6rem;
+    }
+
+    ol.focus-questions {
+      list-style: decimal;
+      padding-left: 1.25rem;
+      margin: 0;
+    }
+
+    ol.focus-questions li {
+      padding: 0.2rem 0;
+      font-size: 0.92rem;
+      color: #444;
+      border-bottom: none;
+    }
+
+    ol.focus-questions li::before { content: none; }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .badge-open        { background: #fff3cd; color: #856404; }
+    .badge-not-started { background: #f0eeea; color: #666; }
+    .badge-blocked     { background: #fce8e8; color: #c0392b; }
+
+    /* ── Action table ── */
+    .action-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .action-table th {
+      text-align: left;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      padding: 0 0.5rem 0.5rem;
+      border-bottom: 2px solid #e8e6e0;
+    }
+
+    .action-table td {
+      padding: 0.5rem 0.5rem;
+      vertical-align: top;
+      border-bottom: 1px solid #f0eeea;
+      color: #333;
+    }
+
+    .action-table tr:last-child td { border-bottom: none; }
 
     /* ── Decisions table ── */
     .decisions-table {
@@ -224,7 +305,7 @@
     <div class="header">
       <div class="org">Morgan Hill Ward · Elders Quorum</div>
       <h1>Presidency Meeting</h1>
-      <div class="date">Sunday, May 24, 2026</div>
+      <div class="date">Sunday, June 8, 2026</div>
     </div>
 
     <div class="body">
@@ -233,48 +314,133 @@
       <div class="framing">
         <div class="framing-item">
           <strong>Opening Prayer</strong>
-          Nathan
+          Steve
         </div>
         <div class="framing-item">
           <strong>Spiritual Thought</strong>
-          Mike
+          Nathan
         </div>
         <div class="framing-item">
           <strong>Closing Prayer</strong>
-          Steve
+          Brad
         </div>
-      </div>
-
-      <!-- Decisions Needed Today -->
-      <div class="urgent">
-        <strong>Decisions Needed Today</strong>
-        Gannon Kane — Quorum Instructor Calling &nbsp;·&nbsp; Sustain in quorum meeting today
       </div>
 
       <!-- Action Items for Review -->
       <div class="section">
         <div class="section-header">
           <h2>Action Items for Review</h2>
+          <span class="time">7 items — due by meeting or blocked</span>
         </div>
-        <ul>
-          <li>Extend calling to Chris Shriver <span style="color:#999">(Nathan — Due May 24)</span></li>
-          <li>Mentor for Josh <span style="color:#999">(Presidency — Due May 24)</span></li>
-          <li>Visit the Hollingsworths <span style="color:#999">(Presidency — Due May 31)</span></li>
-          <li>Check in with Morrisons <span style="color:#999">(Presidency — Due May 31)</span></li>
-        </ul>
+        <table class="action-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Owner</th>
+              <th>Due</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Extend calling to Chris Shiver</td>
+              <td>Nathan</td>
+              <td>May 24</td>
+              <td><span class="badge badge-open">Open</span></td>
+            </tr>
+            <tr>
+              <td>Talk with bishop about calling &amp; sacrament talk for Yves</td>
+              <td>Nathan</td>
+              <td>May 30</td>
+              <td><span class="badge badge-not-started">Not Started</span></td>
+            </tr>
+            <tr>
+              <td>Send text notifications to ministering companions when assignments change</td>
+              <td>Nathan</td>
+              <td>May 30</td>
+              <td><span class="badge badge-not-started">Not Started</span></td>
+            </tr>
+            <tr>
+              <td>Share waste management diesel mechanic job lead with Josh ($28–40/hr, Murrieta)</td>
+              <td>Nathan</td>
+              <td>May 30</td>
+              <td><span class="badge badge-not-started">Not Started</span></td>
+            </tr>
+            <tr>
+              <td>Talk with bishop about breaking Pete/Josh dynamic — connect Josh to independent mentor</td>
+              <td>Nathan</td>
+              <td>May 30</td>
+              <td><span class="badge badge-not-started">Not Started</span></td>
+            </tr>
+            <tr>
+              <td>Visit the Hollingsworths</td>
+              <td>Presidency</td>
+              <td>May 31</td>
+              <td><span class="badge badge-open">Open</span></td>
+            </tr>
+            <tr>
+              <td>Check in with Morrisons</td>
+              <td>Presidency</td>
+              <td>May 31</td>
+              <td><span class="badge badge-open">Open</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <!-- Individuals & Families -->
       <div class="section">
         <div class="section-header">
           <h2>Individuals &amp; Families</h2>
-          <span class="time">30 min</span>
+          <span class="time">People First, Covenant Path Anchored — 30 min</span>
         </div>
+
+        <div class="subsection-header">Prospective Elders</div>
         <ul>
-          <li>Who are we most concerned about right now?</li>
-          <li>What can we do — visits, calls, meals, other? Assign: who goes, with whom, by when.</li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1a5AybCZ741nFyNyQVLjYPNLZSnpXXn2KVWeOxklsaDg" target="_blank">Focus Families Google Sheet</a></li>
+          <li>
+            <strong>Gavin Lundquist</strong> — Bishop conversation about Melchizedek Priesthood flagged since March; no update in two meetings.
+            <span class="question">What is the current status — has the bishop conversation happened, and is there a specific ordination milestone Gavin is working toward?</span>
+          </li>
+          <li>
+            <strong>Landon Henderson</strong> — Flagged as prospective elder with no clear path established; bishop conversation needed.
+            <span class="question">Has anyone been in contact with Landon recently — does he know the Melchizedek Priesthood path and is he interested in moving forward?</span>
+          </li>
+          <li>
+            <strong>Chris Shriver</strong> — Called as assistant secretary (May 24); companion to Brian Law; still needs Melchizedek Priesthood ordination.
+            <span class="question">Has Chris been ordained, or is ordination the next concrete step — and who is actively walking alongside him?</span>
+          </li>
         </ul>
+
+        <div class="subsection-header" style="margin-top:1.25rem;">Part-Member Families</div>
+        <ul>
+          <li>
+            <strong>McIver</strong> — Jeff closed to visits; Shayna active in Primary; Camden and Aiden have pending ordinances (Sacrament/Baptism).
+            <span class="question">Is there a consistent relationship with Camden and Aiden — could Shayna help identify a non-pressure approach to eventually open a door with Jeff?</span>
+          </li>
+          <li>
+            <strong>Lauer</strong> — Nick moved away; Laura and Caden now attending; young men watching out for Caden.
+            <span class="question">With Nick gone and Laura attending, is there a natural moment to open a covenant-path conversation with her?</span>
+          </li>
+          <li>
+            <strong>Yokeley</strong> — Non-member children Melody and Mylo; needs consistent contact; next step Sacrament/Baptisms.
+            <span class="question">What is the family's current openness — are Melody and Mylo at ages where baptism is a realistic near-term goal?</span>
+          </li>
+          <li>
+            <strong>Cain</strong> — Son Brody (age 8) not yet baptized; family requested slower outreach pace; ministers Heiner/Hollingsworth.
+            <span class="question">Is there a gentle, relationship-centered touchpoint that keeps the door open for Brody's baptism without creating pressure?</span>
+          </li>
+        </ul>
+
+        <!-- Focus Family -->
+        <div class="focus-family">
+          <div class="focus-label">Focus Family</div>
+          <div class="focus-name">Brandon Madsen</div>
+          <ol class="focus-questions">
+            <li>Where should the quorum focus right now?</li>
+            <li>What specific support would help?</li>
+            <li>Is there anything the quorum should do?</li>
+          </ol>
+        </div>
       </div>
 
       <!-- Ministering Alignment -->
@@ -284,24 +450,8 @@
           <span class="time">10 min</span>
         </div>
         <ul>
-          <li>Discuss presidency visit rhythm. Identify needed adjustments.</li>
+          <li>Confirm visit rhythm. Identify one adjustment to better support individuals discussed above.</li>
           <li>What are we learning from ministering interviews?</li>
-        </ul>
-      </div>
-
-      <!-- Strategic Focus -->
-      <div class="section">
-        <div class="section-header">
-          <h2>Strategic Focus</h2>
-        </div>
-        <ul>
-          <li><strong>Temple &amp; Family History</strong> <em>(Steve reporting)</em> — Report out on where things stand with the temple and family history plan.
-            <ul style="margin-top:0.35rem;">
-              <li>Volunteers needed for the San Diego Temple open house — who can help?</li>
-              <li>Inviting others to the open house — how are we doing this ourselves, and how do we encourage the quorum to invite?</li>
-            </ul>
-          </li>
-          <li><strong>Quorum Culture &amp; Connection</strong> — How do we use quorum meeting to build brotherhood and connection? Presidency dinner — when, who, format?</li>
         </ul>
       </div>
 
@@ -311,6 +461,7 @@
           <h2>Decisions &amp; Next Steps</h2>
           <span class="time">5 min</span>
         </div>
+        <p style="font-size:0.9rem; color:#555; margin-bottom:0.75rem;">Confirm every decision. Assign owner and date before closing.</p>
         <table class="decisions-table">
           <thead>
             <tr>
@@ -332,7 +483,7 @@
     <!-- Footer -->
     <div class="footer">
       <span>Morgan Hill Ward · Elders Quorum Presidency</span>
-      <span>Generated May 23, 2026</span>
+      <span>Generated June 6, 2026</span>
     </div>
 
   </div><!-- /page -->
