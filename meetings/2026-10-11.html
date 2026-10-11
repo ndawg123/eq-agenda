@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EQ Meeting Review</title>
+<style>
+  :root {
+    --bg: #f7f6f2; --card: #ffffff; --text: #1f2328; --muted: #6b6f76; --line: #e3e1da;
+    --accent: #2f5d8a; --high: #b4462f; --med: #a07415; --low: #4f7a4a; --warn-bg: #fff6e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17191c; --card: #212429; --text: #e6e6e3; --muted: #9a9ea6; --line: #33373d;
+      --accent: #7fa8d4; --high: #e08a74; --med: #d9b25c; --low: #8fbf87; --warn-bg: #3a3220;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { margin: 0 0 4px; font-size: 26px; }
+  header p { margin: 0; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 28px; }
+  .chip { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 13px; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; margin-bottom: 20px; }
+  h2 { margin: 0 0 14px; font-size: 18px; }
+  h2 .count { color: var(--muted); font-weight: 400; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+  td.num { color: var(--muted); width: 28px; }
+  td.nowrap { white-space: nowrap; }
+  .pri { font-weight: 600; }
+  .pri.High { color: var(--high); } .pri.Medium { color: var(--med); } .pri.Low { color: var(--low); }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 4px; margin-left: 6px;
+    background: var(--warn-bg); color: var(--med); border: 1px solid var(--line); }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 6px 0; }
+  li strong { color: var(--accent); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+  .grid section { margin-bottom: 0; }
+  .questions { background: var(--warn-bg); }
+  .questions ol { margin: 0; padding-left: 20px; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>EQ Presidency Meeting — Sunday, Oct 11, 2026</h1>
+    <p>Meeting summary for the presidency · Some confidential items are omitted</p>
+  </header>
+
+  <div class="meta">
+    <span class="chip">Spiritual thought: Steve</span>
+    <span class="chip">Opening prayer: Mike A.</span>
+    <span class="chip">Closing prayer: Nathan</span>
+    <span class="chip">Absent: Brad</span>
+    <span class="chip">Next meeting: Sun, Oct 25</span>
+  </div>
+
+  <section>
+    <h2>Action Items <span class="count">(11)</span></h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Title</th><th>Owner</th><th>Due</th><th>Area</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Post the JustServe sign-up link for the Temecula Day of Service (Sat Oct 17, creek cleanup) to GroupMe; remind people about the bishop's email and the waiver for ages 13–15</td><td>Nathan</td><td class="nowrap">Oct 11</td><td>Tools</td><td class="pri High">High</td></tr>
+        <tr><td class="num">2</td><td>Ask the Trunk or Treat committee (the Lucases) whether they've already given cleanup jobs to other quorums</td><td>Nathan</td><td class="nowrap">Oct 11</td><td>Tools</td><td class="pri High">High</td></tr>
+        <tr><td class="num">3</td><td>Email the other 4 EQ presidencies the cleanup jobs: tables, chairs, emptying bins into the dumpster, sweeping the parking lot and street. Our quorum takes the floater/oversight role</td><td>Nathan</td><td class="nowrap">Oct 17</td><td>Tools</td><td class="pri High">High</td></tr>
+        <tr><td class="num">4</td><td>Confirm with Steve Woods / Ron Pennock that the ward on building cleaning will clean Saturday night after Trunk or Treat, not Saturday morning <span class="tag">implicit</span></td><td>Steve</td><td class="nowrap">Oct 23</td><td>Tools</td><td class="pri Medium">Medium</td></tr>
+        <tr><td class="num">5</td><td>Move forward on the third-teacher calling (after bishop approval)</td><td>Nathan</td><td class="nowrap">Oct 24</td><td>Individuals/Families</td><td class="pri Medium">Medium</td></tr>
+        <tr><td class="num">6</td><td>Coordinate with Elder Treadway on the third-teacher calling <span class="tag">implicit</span></td><td>Steve</td><td class="nowrap">Oct 24</td><td>Individuals/Families</td><td class="pri Low">Low</td></tr>
+        <tr><td class="num">7</td><td>Set the teacher rotation after October (Gannon 1st/3rd, Jared 2nd, new teacher 4th); teachers swap among themselves <span class="tag">implicit</span></td><td>Mike</td><td class="nowrap">Oct 31</td><td>Tools</td><td class="pri Medium">Medium</td></tr>
+        <tr><td class="num">8</td><td>Schedule Q4 ministering interviews on Oct 18, Oct 25, Nov 1 and Nov 15, starting with the easy ones; the rest by phone after that</td><td>Michael Pfeifer</td><td class="nowrap">Oct 17</td><td>Ministering</td><td class="pri High">High</td></tr>
+        <tr><td class="num">9</td><td>Do member visits this week while in town; coordinate scheduling with Brad. Avoid Wednesday</td><td>Nathan</td><td class="nowrap">Oct 17</td><td>Individuals/Families</td><td class="pri Medium">Medium</td></tr>
+        <tr><td class="num">10</td><td>Attend Elder Wada's fireside on Wed Oct 14 (Temecula North Stake center); invite new and interested members</td><td>Nathan</td><td class="nowrap">Oct 14</td><td>Missionary</td><td class="pri Medium">Medium</td></tr>
+        <tr><td class="num">11</td><td>Ask the auxiliaries to plan and calendar TFH activities for May and Oct 2027, and report back in ward council (raised by Steve)</td><td>Presidency</td><td class="nowrap">Oct 24</td><td>Individuals/Families</td><td class="pri Low">Low</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section>
+      <h2>Decisions Made</h2>
+      <ul>
+        <li><strong>Trunk or Treat cleanup:</strong> specific jobs go to the other 4 wards' EQs; Morgan Hill EQ is the floater and makes sure it all gets done.</li>
+        <li><strong>Building cleanup:</strong> the ward on building cleaning that month cleans Saturday night after the event, not Saturday morning.</li>
+        <li><strong>Third teacher:</strong> move forward on a third-teacher calling (after bishop approval).</li>
+        <li><strong>No fourth teacher:</strong> Gannon and Jared are set through October, then reassess.</li>
+        <li><strong>Q4 interviews:</strong> Oct 18, Oct 25, Nov 1, Nov 15. Skip Nov 8 (stake conference), the Sundays around Thanksgiving, and December. Phone calls for the rest.</li>
+        <li><strong>Conducting:</strong> Chris conducts quorum next week (Oct 18).</li>
+        <li><strong>TFH month:</strong> no ward temple night; encourage individual and family temple trips. Steve stays acting TFH leader.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Carry Forward to Oct 25</h2>
+      <ul>
+        <li>Third-teacher calling status</li>
+        <li>Trunk or Treat (Sat Oct 24): other quorums' jobs accepted? Building cleanup confirmed?</li>
+        <li>Q4 interview progress after Oct 18</li>
+        <li>TFH leader: no response from the bishopric yet</li>
+        <li>Day of Service turnout and sign-up/waiver hassle</li>
+        <li>Teacher rotation after October</li>
+        <li>Follow-up on recent quorum visits</li>
+        <li><strong>Not reached:</strong> focus family and individuals review, supporting the full-time missionaries</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>Shared version for the EQ presidency, Morgan Hill Ward. Personal and welfare details are intentionally left out.</footer>
+</main>
+</body>
+</html>
